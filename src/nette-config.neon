@@ -1,0 +1,9 @@
+services:
+	- Doctor\Http\RequestFactory
+	-
+		class: Psr\Http\Message\RequestInterface
+		factory: @Doctor\Http\RequestFactory::createFromGlobals
+	- Doctor\Rest\Route\Router(%cacheDir%, %debugMode%)
+	- Doctor\Rest\Route\RouterCache(%cacheDir%)
+	- Doctor\Rest\Application(%debugMode%)
+	- Doctor\DI\Nette\Controller\ControllerProvider
