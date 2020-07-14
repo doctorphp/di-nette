@@ -1,0 +1,29 @@
+{
+	"name": "doctor/di-nette",
+	"description": "Doctor DI with Nette\\DI implementation",
+	"type": "library",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Pavel Janda",
+			"email": "me@paveljanda.com"
+		}
+	],
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"autoload": {
+		"psr-4": {
+			"Doctor\\DI\\PSR\\": "src/"
+		}
+	},
+	"require": {
+		"doctor/http": "dev-master",
+		"doctor/rest": "dev-master",
+		"nette/di": "^3.0",
+		"psr/http-message": "^1.0",
+		"filp/whoops": "^2.7"
+	},
+	"require-dev": {
+		"gamee/php-code-checker-rules": "^2.0"
+	}
+}
