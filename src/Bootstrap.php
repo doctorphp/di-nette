@@ -53,7 +53,7 @@ final class Bootstrap
 			}
 
 			$compiler->loadConfig(__DIR__ . '/nette-config.neon');
-		});
+		}, $this->debugMode ? 'debug' : null);
 
 		$container = new $class;
 
