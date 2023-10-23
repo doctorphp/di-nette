@@ -22,6 +22,7 @@ final class Bootstrap
 	private ContainerLoader $containerLoader;
 	private bool $debugMode;
 	private string $cacheDir;
+	/** @var array<string> */
 	private array $configFiles = [];
 
 
@@ -55,6 +56,7 @@ final class Bootstrap
 			$compiler->loadConfig(__DIR__ . '/nette-config.neon');
 		}, $this->debugMode ? 'debug' : null);
 
+		/** @var Container $container */
 		$container = new $class;
 
 		$container->getByType(ControllerProvider::class)->setContainer($container);

@@ -17,13 +17,17 @@
 		}
 	},
 	"require": {
-		"doctor/http": "dev-master",
 		"doctor/rest": "dev-master",
 		"nette/di": "^3.0",
-		"psr/http-message": "^1.0",
-		"filp/whoops": "^2.7"
+		"psr/http-message": "^2.0"
 	},
 	"require-dev": {
-		"gamee/php-code-checker-rules": "^2.0"
-	}
+		"contributte/qa": "^0.2.0",
+		"contributte/dev": "^0.4.0",
+		"phpstan/phpstan": "^1.5.0",
+		"phpstan/phpstan-deprecation-rules": "^1.0.0",
+		"phpstan/phpstan-strict-rules": "^1.1.0"
+	},
+	"prefer-stable": true,
+	"minimum-stability": "dev"
 }

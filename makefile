@@ -1,6 +1,6 @@
 .PHONY: stan
 stan:
-	php -d memory_limit=256M vendor/bin/phpstan analyse src -c vendor/gamee/php-code-checker-rules/phpstan.neon --level 8
+	php -d memory_limit=256M vendor/bin/phpstan analyse src -c phpstan.neon --level 8
 
 .PHONY: cs
 cs:
